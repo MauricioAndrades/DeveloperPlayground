@@ -4,6 +4,76 @@ const hasSet = typeof Set === "function";
 const hasArrayBuffer = typeof ArrayBuffer === "function" && !!ArrayBuffer.isView;
 
 /**
+ * @description
+ * equal(a, b)
+|
++-- a === b?
+|   |
+|   +-- true
+|
++-- a && b && typeof a === "object" && typeof b === "object"?
+    |
+    +-- visited.has(a) || visited.has(b)?
+    |   |
+    |   +-- true
+    |
+    +-- a.constructor !== b.constructor?
+    |   |
+    |   +-- true
+    |
+    +-- Array.isArray(a)?
+    |   |
+    |   +-- a.length !== b.length?
+    |   |   |
+    |   |   +-- true
+    |   |
+    |   +-- a.length === 0?
+    |   |   |
+    |   |   +-- true
+    |   |
+    |   +-- equal(a[0], b[0])
+    |       |
+    |       +-- ...
+    |
+    +-- hasMap && a instanceof Map && b instanceof Map?
+    |   |
+    |   +-- a.size !== b.size?
+    |   |   |
+    |   |   +-- true
+    |   |
+    |   +-- b.has(i.value[0])?
+    |   |   |
+    |   |   +-- true
+    |   |
+    |   +-- equal(i.value[1], b.get(i.value[0]))
+    |       |
+    |       +-- ...
+    |
+    +-- hasSet && a instanceof Set && b instanceof Set?
+    |   |
+    |   +-- a.size !== b.size?
+    |   |   |
+    |   |   +-- true
+    |   |
+    |   +-- b.has(i.value[0])?
+    |   |   |
+    |   |   +-- true
+    |   |
+    |   +-- true
+    |
+    +-- a.constructor === RegExp?
+    |   |
+    |   +-- a.source === b.source && a.flags === b.flags
+    |
+    +-- a.valueOf !== Object.prototype.valueOf?
+    |   |
+    |   +-- a.valueOf() === b.valueOf()
+    |
+    +-- a.toString !== Object.prototype
+
+ */
+
+/**
  * Returns whether two values are equal.
  * @param {any} a - The first value to compare.
  * @param {any} b - The second value to compare.
