@@ -59,7 +59,7 @@ function useIntersectionObserver(onIntersect, options) {
         observerRef.current = null;
       }
     };
-  }, [ onIntersect, root, rootMargin, threshold ]);
+  }, [onIntersect, root, rootMargin, threshold]);
 
   return targetRef;
 }

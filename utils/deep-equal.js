@@ -46,7 +46,11 @@ const equal = (a, b, visited = new WeakSet()) => {
     return false;
   }
 
-  if (aType === "[object Array]" || aType === "[object NodeList]" || aType === "[object HTMLCollection]") {
+  if (
+    aType === "[object Array]" ||
+    aType === "[object NodeList]" ||
+    aType === "[object HTMLCollection]"
+  ) {
     if (a.length !== b.length) {
       return false;
     }
@@ -82,7 +86,11 @@ const equal = (a, b, visited = new WeakSet()) => {
     return true;
   }
 
-  if (aType === "[object ArrayBuffer]" && ArrayBuffer.isView(a) && ArrayBuffer.isView(b)) {
+  if (
+    aType === "[object ArrayBuffer]" &&
+    ArrayBuffer.isView(a) &&
+    ArrayBuffer.isView(b)
+  ) {
     if (a.length !== b.length) {
       return false;
     }
@@ -110,8 +118,11 @@ const equal = (a, b, visited = new WeakSet()) => {
     return a.toString() === b.toString();
   }
 
+  const aKeys = Object.keys(a);
+  const bKeys = Object.keys(b);
+
   if (aType === "[object Object]") {
-    if (Object.keys(a).length !== Object.keys(b).length) {
+    if (aKeys.length !== bKeys.length) {
       return false;
     }
     for (const key in a) {
@@ -125,4 +136,4 @@ const equal = (a, b, visited = new WeakSet()) => {
   return false;
 };
 
-module.exports = equal;
+export { equal as default, equal };
