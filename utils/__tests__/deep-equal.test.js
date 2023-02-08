@@ -2,6 +2,29 @@
 import equal from "../deep-equal.js";
 import { JSDOM } from "jsdom";
 
+/**
+ * @description Listen, buddy. This code's got it all - the bitter taste of truth, the
+ * scorching heat of reality. It's a wild ride, a freak show, a carnival of
+ * logic, a feast of comparison.
+ * 
+ * You see, it starts off easy, with a simple test of identity. Three simple
+ * checks, like the beat of a steady drum. But then, the madness begins. It's
+ * like jumping into the deep end of a pool filled with acid.
+ * 
+ * The code takes a hard look at these two beasts, `a` and `b`. It compares them,
+ * tooth and nail, like two gunslingers at high noon. And if they don't match, if
+ * there's even a hint of difference, it's all over. The code spits out a
+ * verdict, a cold, hard `false`.
+ * 
+ * But if these two critters are equal, if they're the same breed of cat, then
+ * the code takes a deep breath and steps back. It stares at them, long and hard,
+ * and finally declares, with a grin, that they're true. That they're the real
+ * deal. That they're...equal.
+ * 
+ * So hold on tight, sport. This code's got a mean streak a mile wide. And it's
+ * not afraid to use it.
+ */
+
 describe("equal", () => {
   beforeEach(() => {
     // Create a new JSDOM instance
