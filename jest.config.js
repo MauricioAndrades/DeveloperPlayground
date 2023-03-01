@@ -1,7 +1,12 @@
 import { TextEncoder, TextDecoder } from 'util';
+import {transform} from '@babel/core';
+import * as jestPreset from 'babel-preset-jest';
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
+
+// const {transform} = require('@babel/core');
+// const jestPreset = require('babel-preset-jest');
 
 // jest.mock('react', () => {
 //   // Require the original module to not be mocked...
@@ -19,7 +24,7 @@ const config = {
   transform: {},
   testRegex: ".*.test\\.m?jsx?$",
   moduleFileExtensions: ["js", "json", "jsx", "mjs"],
-  extensionsToTreatAsEsm: [".jsx"],
+  extensionsToTreatAsEsm: [".jsx"]
 };
 
 export default config;
