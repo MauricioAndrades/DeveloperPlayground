@@ -1,13 +1,7 @@
-import React, { useEffect, useRef,  } from "react";
+import React, { useEffect, useRef } from "react";
 
-const SUPPORTS_INTERSECTION_OBSERVER =
-  typeof window === "object" && "IntersectionObserver" in window;
-
-const DEFAULT_OPTIONS = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0,
-};
+const SUPPORTS_INTERSECTION_OBSERVER = typeof window === "object" && "IntersectionObserver" in window;
+const DEFAULT_OPTIONS = { root: null, rootMargin: "0px", threshold: 0, };
 
 /**
  * Observe changes in the intersection of an element with its ancestor elements
@@ -24,14 +18,14 @@ const DEFAULT_OPTIONS = {
  *     return <div ref={ref}>Hello World!</div>;
  *   };
  */
-export function useIntersectionObserver(onIntersect, options) {
+function useIntersectionObserver(onIntersect, options) {
   const observerRef = useRef(null);
   const targetRef = useRef(null);
   const { root, rootMargin, threshold } = options || DEFAULT_OPTIONS;
 
   useEffect(() => {
     if (observerRef.current) {
-      observerRef.current.disconnect();
+      observerRef.current.disconnect?.();
     }
 
     if (SUPPORTS_INTERSECTION_OBSERVER) {
@@ -55,7 +49,7 @@ export function useIntersectionObserver(onIntersect, options) {
     // Clean up the observer when the component unmounts
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
+        observerRef.current.disconnect?.();
         observerRef.current = null;
       }
     };
