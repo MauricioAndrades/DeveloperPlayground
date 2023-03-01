@@ -15,7 +15,7 @@ const DEFAULT_OPTIONS = {
  * @param {(entry: IntersectionObserverEntry) => void} onIntersect - Callback function to be called when element * intersects with viewport
  * @param {IntersectionObserverInit} [options] - Intersection observer options
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
- * 
+ *
  @example
  *   const SomeComp = (props) => {
  *     const ref = useIntersectionObserver(() => {
