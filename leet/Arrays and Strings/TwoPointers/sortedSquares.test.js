@@ -8,6 +8,3 @@ describe("sortedSquares", () => {
     expect(sortedSquares([-5, -4, -3, -2, -1])).toEqual([1, 4, 9, 16, 25]);
   });
 });
-
-// Explanation: After squaring, the array becomes [16,1,0,9,100].
-// After sorting, it becomes [0,1,9,16,100].

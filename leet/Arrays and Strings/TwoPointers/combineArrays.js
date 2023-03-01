@@ -1,18 +1,3 @@
-//   Two pointers
-
-// const twoPointers = (arr) => {
-//     const start = 0;
-//     const end = arr.length - 1;
-
-//     while (start < left) {
-//         // do some logic depending on the problem
-//         // do some more logic to decide
-//         // 1. start++
-//         // 2. end--
-//         // 3. or both
-//     }
-// };
-
 /**
  * Another approach:
  *
