@@ -9,7 +9,7 @@
  * 3. At each iteration of the loop, move the pointers forwards. This means incrementing either one of the pointers or both of the pointers. Deciding which pointers to move will depend on the problem we are trying to solve.
  * 4. Because our while loop will stop when one of the pointers reaches the end, the other pointer will not be at the end when the loop finishes. Sometimes, we need to iterate through all elements - if this is the case, you will need to write extra code here to make sure both iterables are exhausted.
  * @example
- * function fn(arr1, arr2) {
+function fn(arr1, arr2) {
   let i = 0;
   let j = 0;
 
@@ -35,11 +35,6 @@
   }
 }
  */
-
-// Example 3: Given two sorted integer arrays, return an array that combines both of them and is also sorted.
-
-const arrOne = [1, 4, 7, 20];
-const arrTwo = [3, 5, 6];
 
 /**
  * @param {number[]} arrA
@@ -73,5 +68,3 @@ export const combineArrays = (arrA, arrB) => {
 
   return ret;
 };
-
-// console.log(combineArrays(arrOne, arrTwo));

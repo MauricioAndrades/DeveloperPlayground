@@ -1,3 +1,7 @@
+/**
+ * @param {string} s
+ * @returns {boolean}
+ */
 export const checkIfPalendrome = (s) => {
   let left = 0;
   let right = s.length - 1;
