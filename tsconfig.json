@@ -108,5 +108,6 @@
     "require": ["tsconfig-paths/register"],
     "esm": true
   },
-  "files": ["src/utils/equal.js", "src/utils/loader.js", "src/hooks/useIntersectionObserver.jsx", "src/hooks/useMemoCompare.js"]
+  "files": ["src/utils/equal.js", "src/utils/loader.js", "src/hooks/useIntersectionObserver.jsx", "src/hooks/useMemoCompare.js"],
+  "include": ["leet/**/*"]
 }

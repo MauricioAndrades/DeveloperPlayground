@@ -1,8 +1,9 @@
 const nums = [1, 2, 4, 6, 8, 9, 14, 15];
 /**
- * @see
- * arr must be sorted
  * @param {number[]} arr
+ * @param {number} target
+ * @example
+ *  
  */
 export const sum = (arr, target) => {
   let left = 0;

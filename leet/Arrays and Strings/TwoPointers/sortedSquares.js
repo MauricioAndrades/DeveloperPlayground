@@ -1,4 +1,5 @@
 /**
+ * @description Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
  * @example
  *     squaresSortedArray([-4, -1, 0, 3, 10]); // [0,1,9,16,100]
  *
