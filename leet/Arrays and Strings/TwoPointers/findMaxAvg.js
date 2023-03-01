@@ -15,13 +15,16 @@ export const findMaxAverage = (nums, k) => {
 
     let left = 0;
     let right = k - 1;
-    let sum = nums.slice(0, k).reduce((acc,curr)=>acc+curr, 0);
+    let sum = nums.slice(0, k).reduce((acc,curr)=>{
+        acc += curr;
+        return acc;
+    }, 0);
 
     let maxSum = sum;
 
       // Step 3: Use two pointers to slide a window of size k through the array
 
-    while (right <= nums.length - 1 ) {
+    while (right < nums.length - 1 ) {
         // remove the left element from the sum
         sum -= nums[left];
         // move the left pointer to the right
