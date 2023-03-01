@@ -10,6 +10,11 @@ const resolveAsync = promisify(resolveCallback);
 
 const baseURL = pathToFileURL(`${cwd()}/`).href;
 
+/**
+ * @param {string} specifier
+ * @param {{ parentURL?: string | undefined; }} context
+ * @param {(arg0: string, arg1: any) => any} next
+ */
 export async function resolve(specifier, context, next) {
   const { parentURL = baseURL } = context;
 
@@ -32,12 +37,11 @@ export async function resolve(specifier, context, next) {
       extensions: [ ".js", ".json", ".node", ".mjs" ],
     });
     url = pathToFileURL(resolution).href;
-  } catch (error) {
-    if (error.code === "MODULE_NOT_FOUND") {
-      // Match Node's error code
-      error.code = "ERR_MODULE_NOT_FOUND";
+  } catch (e) {
+    if (e.code === "MODULE_NOT_FOUND") {
+      e.code = "ERR_MODULE_NOT_FOUND";
     }
-    throw error;
+    throw e;
   }
 
   return next(url, context);

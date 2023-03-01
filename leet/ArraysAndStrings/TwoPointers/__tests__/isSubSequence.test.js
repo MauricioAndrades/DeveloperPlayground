@@ -1,4 +1,4 @@
-import { isSubSequence } from "./isSubSequence";
+import { isSubSequence } from "../isSubSequence";
 
 test("returns true if a string is a subsequence of another string", () => {
   expect(isSubSequence("ace", "abcde")).toBe(true);

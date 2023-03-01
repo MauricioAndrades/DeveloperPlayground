@@ -51,4 +51,4 @@ export const findMaxConsecutiveOnes = (nums, k) => {
     return maxOnes;
 };
 
-console.log(findMaxConsecutiveOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2));
+// console.log(findMaxConsecutiveOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2));

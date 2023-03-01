@@ -1,4 +1,4 @@
-import { sum } from "./sum";
+import { sum } from "../sum";
 
 test("returns true if two numbers in the array sum to the target", () => {
   const nums = [1, 2, 4, 6, 8, 9, 14, 15];

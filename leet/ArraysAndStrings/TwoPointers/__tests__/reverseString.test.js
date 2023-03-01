@@ -1,4 +1,4 @@
-import { reverseString } from "./reverseString";
+import { reverseString } from "../reverseString";
 
 test("reverses a string in place", () => {
   const input = ["h", "e", "l", "l", "o"];

@@ -1,4 +1,4 @@
-import { combineArrays } from "./combineArrays.js";
+import { combineArrays } from "../combineArrays.js";
 
 test("combines two sorted arrays", () => {
   const arrOne = [1, 4, 7, 20];

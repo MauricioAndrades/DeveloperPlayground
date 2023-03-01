@@ -1,4 +1,4 @@
-import { sortedSquares } from "./sortedSquares";
+import { sortedSquares } from "../sortedSquares";
 
 describe("sortedSquares", () => {
   it("returns the sorted squares of the input array", () => {

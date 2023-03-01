@@ -1,4 +1,4 @@
-import { findMaxAvg, findMaxAvgIter } from './findMaxAvg';
+import { findMaxAvg, findMaxAvgIter } from '../findMaxAvg';
 
 describe('findMaxAverage', () => {
   it('returns the maximum average of a contiguous subarray of length k', () => {

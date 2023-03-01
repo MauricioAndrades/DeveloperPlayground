@@ -1,4 +1,4 @@
-import { checkIfPalendrome } from "./checkIfPalendrome";
+import { checkIfPalendrome } from "../checkIfPalendrome";
 
 test("checks if a string is a palindrome", () => {
   expect(checkIfPalendrome("racecar")).toBe(true);
