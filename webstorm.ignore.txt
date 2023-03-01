@@ -1,0 +1,1 @@
+"*.1:*.bak:*.bnf:*.BSD:*.coffee:*.cts:*.flow:*.idx:*.iml:*.LICENSE:*.lock:*.log:*.map:*.markdown:*.md:*.mdown:*.mts:*.node:*.pack:*.png:*.sample:*.sh:*.svg:*.txt:*.xml:*.yml"

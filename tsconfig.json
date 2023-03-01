@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "resolveJsonModule": true,
         "allowJs": true,
         "baseUrl": ".",
         "checkJs": true,
@@ -10,6 +9,7 @@
         "module": "ESNext",
         "moduleResolution": "node",
         "outDir": "./dist",
+        "resolveJsonModule": true,
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
         "strict": true,
@@ -21,8 +21,7 @@
     },
     "include": [
         "src/**/*",
-        "./leet",
-        "tmp.mjs"
+        "./leet"
     ],
     "ts-node": {
         "esm": true,

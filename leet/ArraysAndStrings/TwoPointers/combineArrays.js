@@ -1,14 +1,14 @@
 /**
- * Another approach:
- *
  * @param {number[]} arr1
  * @param {number[]} arr2
  * @see https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/703/arraystrings/4501/
+ *
+ * @description
  * 1. Create two pointers, one for each iterable. Each pointer should start at the first index.
  * 2. Use a while loop until one of the pointers reaches the end of its iterable.
  * 3. At each iteration of the loop, move the pointers forwards. This means incrementing either one of the pointers or both of the pointers. Deciding which pointers to move will depend on the problem we are trying to solve.
  * 4. Because our while loop will stop when one of the pointers reaches the end, the other pointer will not be at the end when the loop finishes. Sometimes, we need to iterate through all elements - if this is the case, you will need to write extra code here to make sure both iterables are exhausted.
- * @example
+ */
 function fn(arr1, arr2) {
   let i = 0;
   let j = 0;
@@ -34,7 +34,6 @@ function fn(arr1, arr2) {
     j++;
   }
 }
- */
 
 /**
  * @param {number[]} arrA

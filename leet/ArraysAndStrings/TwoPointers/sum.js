@@ -1,9 +1,7 @@
-const nums = [1, 2, 4, 6, 8, 9, 14, 15];
+// const nums = [1, 2, 4, 6, 8, 9, 14, 15];
 /**
  * @param {number[]} arr
  * @param {number} target
- * @example
- *  
  */
 export const sum = (arr, target) => {
   let left = 0;

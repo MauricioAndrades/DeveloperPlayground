@@ -1,6 +1,6 @@
-import { TextEncoder, TextDecoder } from 'util';
-import {transform} from '@babel/core';
-import * as jestPreset from 'babel-preset-jest';
+import { TextEncoder, TextDecoder } from "util";
+import { transform } from "@babel/core";
+import * as jestPreset from "babel-preset-jest";
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -24,7 +24,7 @@ const config = {
   transform: {},
   testRegex: ".*.test\\.m?jsx?$",
   moduleFileExtensions: ["js", "json", "jsx", "mjs"],
-  extensionsToTreatAsEsm: [".jsx"]
+  extensionsToTreatAsEsm: [".jsx"],
 };
 
 export default config;
