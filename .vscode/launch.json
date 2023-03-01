@@ -1,0 +1,212 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "args": [
+                "${relativeFile}"
+            ]
+        },
+        {
+            "name": "ts-node",
+            "request": "launch",
+            "type": "node",
+            "runtimeArgs": [
+                "--harmony",
+                "--enable-source-maps",
+                "--experimental-abortcontroller",
+                "--no-force-async-hooks-checks",
+                "-r",
+                "${workspaceFolder}/node_modules/ts-node/register",
+                "-r",
+                "${workspaceFolder}/node_modules/tsconfig-paths/register",
+                "--inspect-brk"
+            ],
+            "args": [
+                "${relativeFile}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "NODE_OPTIONS": "--enable-source-maps",
+                "NODE_ENV": "development",
+                "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+            },
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ]
+        },
+        {
+            "name": "node-harmony",
+            "request": "launch",
+            "type": "node",
+            "runtimeArgs": [
+                "--harmony",
+                "--enable-source-maps",
+                "--experimental-fetch",
+                "--experimental-import-meta-resolve",
+                "--experimental-vm-modules",
+                "--experimental-modules",
+                "--experimental-abortcontroller",
+                "--experimental-json-modules",
+                "--es-module-specifier-resolution=node",
+                "--inspect-brk"
+                // "--inspect-port", /* set host:port for inspector */
+                // "--inspect", /* activate inspector on host:port (default: 127.0.0.1:9229) */
+                // "--debug",
+                // "--debug-brk",
+                // "--inspect-brk", /* activate inspector on host:port and break at start of user script */
+                // "--inspect-brk-node",
+                // "--inspect-publish-uid", /* comma separated list of destinations for inspector uid(default: stderr,http) */
+                // "--conditions", /* additional user conditions for conditional exports and imports */
+                // "--diagnostic-dir", /* set dir for all output files (default: current working directory) */
+                // "--dns-result-order", /* set default value of verbatim in dns.lookup. Options are 'ipv4first' (IPv4 addresses are placed before IPv6 addresses)  'verbatim' (addresses are in the order the DNS resolver  returned) */
+                // "--enable-source-maps", /* Source Map V3 support for stack traces */
+                // "--experimental-abortcontroller",
+                // "--experimental-fetch", /* experimental Fetch API */
+                // "--experimental-global-customevent", /* expose experimental CustomEvent on the global scope */
+                // "--experimental-global-webcrypto", /* expose experimental Web Crypto API on the global scope */
+                // "--experimental-json-modules",
+                // "--experimental-loader", /* use the specified module as a custom loader */
+                // "--experimental-modules",
+                // "--experimental-network-imports", /* experimental https: support for the ES Module loader */
+                // "--experimental-wasm-modules", /* experimental ES Module support for webassembly modules */
+                // "--experimental-import-meta-resolve", /* experimental ES Module import.meta.resolve() support */
+                // "--experimental-policy", /* use the specified file as a security policy */
+                // "--policy-integrity", /* ensure the security policy contents match the specified integrity */
+                // "--experimental-repl-await", /* experimental await keyword support in REPL */
+                // "--experimental-vm-modules", /* experimental ES Module support in vm module */
+                // "--experimental-worker",
+                // "--experimental-report",
+                // "--experimental-wasi-unstable-preview1", /* experimental WASI support */
+                // "--expose-internals",
+                // "--frozen-intrinsics", /* experimental frozen intrinsics support */
+                // "--heapsnapshot-signal", /* Generate heap snapshot on specified signal */
+                // "--heapsnapshot-near-heap-limit", /* Generate heap snapshots whenever V8 is approaching the heap limit. No more than the specified number of  heap snapshots will be generated. */
+                // "--http-parser",
+                // "--insecure-http-parser", /* use an insecure HTTP parser that accepts invalid HTTP headers */
+                // "--input-type", /* set module type for string input */
+                // "--experimental-specifier-resolution",
+                // "--deprecation", /* silence deprecation warnings */
+                // "--force-async-hooks-checks", /* disable checks for async_hooks */
+                // "--force-node-api-uncaught-exceptions-policy", /* enforces 'uncaughtException' event on Node API asynchronous callbacks */
+                // "--addons", /* disable loading native addons */
+                // "--global-search-paths", /* disable global module search paths */
+                // "--warnings", /* silence all process warnings */
+                // "--force-context-aware", /* disable loading non-context-aware addons */
+                // "--pending-deprecation", /* emit pending deprecation warnings */
+                // "--preserve-symlinks", /* preserve symbolic links when resolving */
+                // "--preserve-symlinks-main", /* preserve symbolic links when resolving the main module */
+                // "--prof", /* Generate V8 profiler output. */
+                // "--prof-process", /* process V8 profiler output generated using --prof */
+                // "--cpu-prof", /* Start the V8 CPU profiler on start up, and write the CPU profile to disk before exit. If --cpu-prof-dir is not specified, write  the profile to the current working directory. */
+                // "--cpu-prof-name", /* specified file name of the V8 CPU profile generated with --cpu-prof */
+                // "--cpu-prof-interval", /* specified sampling interval in microseconds for the V8 CPU profile generated with --cpu-prof. (default: 1000) */
+                // "--cpu-prof-dir", /* Directory where the V8 profiles generated by --cpu-prof will be placed. Does not affect --prof. */
+                // "--heap-prof", /* Start the V8 heap profiler on start up, and write the heap profile to disk before exit. If --heap-prof-dir is not specified, write  the profile to the current working directory. */
+                // "--heap-prof-name", /* specified file name of the V8 heap profile generated with --heap-prof */
+                // "--heap-prof-dir", /* Directory where the V8 heap profiles generated by --heap-prof will be placed. */
+                // "--heap-prof-interval", /* specified sampling interval in bytes for the V8 heap profile generated with --heap-prof. (default: 512 * 1024) */
+                // "--max-http-header-size", /* set the maximum size of HTTP headers (default: 16384 (16KB)) */
+                // "--redirect-warnings", /* write warnings to file instead of stderr */
+                // "--test", /* launch test runner on startup */
+                // "--test-name-pattern", /* run tests whose name matches this regular expression */
+                // "--test-only", /* run tests with 'only' option set */
+                // "--test-udp-no-try-send",
+                // "--throw-deprecation", /* throw an exception on deprecations */
+                // "--trace-atomics-wait", /* (deprecated) trace Atomics.wait() operations */
+                // "--trace-deprecation", /* show stack traces on deprecations */
+                // "--trace-exit", /* show stack trace when an environment exits */
+                // "--trace-sync-io", /* show stack trace when use of sync IO is detected after the first tick */
+                // "--trace-tls", /* prints TLS packet trace information to stderr */
+                // "--trace-uncaught", /* show stack traces for the `throw` behind uncaught exceptions */
+                // "--trace-warnings", /* show stack traces on process warnings */
+                // "--extra-info-on-fatal-exception", /* hide extra information on fatal exception that causes exit */
+                // "--unhandled-rejections", /* define unhandled rejections behavior. Options are 'strict' (always raise an error), 'throw' (raise an error unless  'unhandledRejection' hook is set), 'warn' (log a warning), 'none'  (silence warnings), 'warn-with-error-code' (log a warning and set  exit code 1 unless 'unhandledRejection' hook is set). (default:  throw) */
+                // "--verify-base-objects",
+                // "--watch", /* run in watch mode */
+                // "--watch-path", /* path to watch */
+                // "--check", /* syntax check script without executing */
+                // "[has_eval_string]",
+                // "--eval", /* evaluate script */
+                // "--print", /* evaluate script and print result */
+                // "--require", /* CommonJS module to preload (option can be repeated) */
+                // "--import", /* ES module to preload (option can be repeated) */
+                // "--interactive", /* always enter the REPL even if stdin does not appear to be a terminal */
+                // "--update-assert-snapshot", /* update assert snapshot files */
+                // "--napi-modules",
+                // "--tls-keylog", /* log TLS decryption keys to named file for traffic analysis */
+                // "--tls-min-v1.0", /* set default TLS minimum to TLSv1.0 (default: TLSv1.2) */
+                // "--tls-min-v1.1", /* set default TLS minimum to TLSv1.1 (default: TLSv1.2) */
+                // "--tls-min-v1.2",
+                /* set default TLS minimum to TLSv1.2 (default: TLSv1.2) */ // set default TLS minimum to TLSv1.3 (default: TLSv1.2)
+                // "--tls-min-v1.3",
+                // "--tls-max-v1.2", /* set default TLS maximum to TLSv1.2 (default: TLSv1.3) */
+                // "--tls-max-v1.3", /* set default TLS maximum to TLSv1.3 (default: TLSv1.3) */
+                // "--track-heap-objects", /* track heap object allocations for heap snapshots */
+                // "--abort-on-uncaught-exception", /* aborting instead of exiting causes a core file to be generated for analysis */
+                // "--interpreted-frames-native-stack", /* help system profilers to translate JavaScript interpreted frames */
+                // "--max-old-space-size",
+                // "--perf-basic-prof",
+                // "--perf-basic-prof-only-functions",
+                // "--perf-prof",
+                // "--perf-prof-unwinding-info",
+                // "--stack-trace-limit",
+                // "--disallow-code-generation-from-strings", /* disallow eval and friends */
+                // "--huge-max-old-generation-size", /* increase default maximum heap size on machines with 16GB memory or more */
+                // "--jitless", /* disable runtime allocation of executable memory */
+                // "--report-uncaught-exception", /* generate diagnostic report on uncaught exceptions */
+                // "--report-on-signal", /* generate diagnostic report upon receiving signals */
+                // "--report-signal", /* causes diagnostic report to be produced on provided signal, unsupported in Windows. (default: SIGUSR2) */
+                // "--experimental-top-level-await",
+                // "--experimental-shadow-realm",
+                // "--harmony-shadow-realm",
+                // "--title", /* the process title to use on startup */
+                // "--trace-event-categories", /* comma separated list of trace event categories to record */
+                // "--trace-event-file-pattern", /* Template string specifying the filepath for the trace-events data, it supports ${rotation} and ${pid}. */
+                // "--v8-pool-size", /* set V8's thread pool size */
+                // "--zero-fill-buffers", /* automatically zero-fill all newly allocated Buffer and SlowBuffer instances */
+                // "--debug-arraybuffer-allocations",
+                // "--disable-proto", /* disable Object.prototype.__proto__ */
+                // "--build-snapshot", /* Generate a snapshot blob when the process exits. Currently only supported in the node_mksnapshot binary. */
+                // "--node-snapshot",
+                // "--snapshot-blob", /* Path to the snapshot blob that's either the result of snapshotbuilding, or the blob that is used to restore the application  state */
+                // "--security-revert",
+                // "--completion-bash", /* print source-able bash completion script */
+                // "--help", /* print node command line options */
+                // "--version", /* print Node.js version */
+                // "--v8-options", /* print V8 command line options */
+                // "--report-compact", /* output compact single-line JSON */
+                // "--report-dir", /* define custom report pathname. (default: current working directory) */
+                // "--report-filename", /* define custom report file name. (default: YYYYMMDD.HHMMSS.PID.SEQUENCE#.txt) */
+                // "--report-on-fatalerror", /* generate diagnostic report on fatal (internal) errors */
+                // "--icu-data-dir", /* set ICU data load path to dir (overrides NODE_ICU_DATA) */
+                // "--openssl-config", /* load OpenSSL configuration from the specified file (overrides OPENSSL_CONF) */
+                // "--tls-cipher-list", /* use an alternative default TLS cipher list */
+                // "--use-openssl-ca", /* use OpenSSL's default CA store  (default) */
+                // "--use-bundled-ca", /* use bundled CA store  (default) */
+                // "--enable-fips", /* enable FIPS crypto at startup */
+                // "--force-fips", /* force FIPS crypto (cannot be disabled) */
+                // "--secure-heap", /* total size of the OpenSSL secure heap */
+                // "--secure-heap-min", /* minimum allocation size from the OpenSSL secure heap */
+                // "--openssl-legacy-provider", /* enable OpenSSL 3.0 legacy provider */
+                // "--openssl-shared-config", /* enable OpenSSL shared configuration */
+                // "--use-largepages", /* Map the Node.js static code to large pages. Options are 'off' (the default value, meaning do not map), 'on' (map and ignore failure, reporting it to stderr), or 'silent' (map and silently ignore failure) */
+                // "--trace-sigint", /* enable printing JavaScript stacktrace on SIGINT */
+                // "--node-memory-debug", /* Run with extra debug checks for memory leaks in Node.js itself */
+            ],
+            "args": [
+                "${workspaceFolder}/${relativeFile}",
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "NODE_ENV": "development",
+                "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json",
+                "NODE_PATH": "${workspaceFolder}/node_modules:/usr/local/lib/node_modules"
+            },
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ]
+        }
+    ],
+}

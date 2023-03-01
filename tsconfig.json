@@ -19,17 +19,14 @@
             "./typings"
         ]
     },
-    "exclude": [
-        "*.ignore.*"
-    ],
     "include": [
-        "./leet"
-, "tmp.mjs"    ],
+        "./leet",
+        "tmp.mjs"
+    ],
     "ts-node": {
         "esm": true,
         "ignore": [
-            "(?:^|/)node_modules/",
-            "*.ignore.js"
+            "(?:^|/)node_modules/"
         ],
         "require": [
             "tsconfig-paths/register"
