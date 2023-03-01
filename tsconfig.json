@@ -19,7 +19,6 @@
             "./typings"
         ]
     },
-    "files": ["src/hooks/IntersectionObserver/useInView.ts"],
     "include": [
         "src/**/*",
         "./leet",
