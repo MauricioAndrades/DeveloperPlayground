@@ -1,3 +1,5 @@
+/** @typedef {{name: 'foo'}}  SHOE_COLORS */
+
 /**
  * @param {string} s
  * @returns {boolean}
